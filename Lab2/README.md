@@ -14,19 +14,16 @@ using System;
 
 class Program
 {
-    // 1. int տիպի համար
     static int ToMultiplicate(int x, int n = 2)
     {
         return x * n;
     }
 
-    // 2. double տիպի համար
     static double ToMultiplicate(double x, int n = 2)
     {
         return x * n;
     }
 
-    // 3. string տիպի համար (N հատ իրար կպցնելու տարբերակով)
     static string ToMultiplicate(string x, int n = 2)
     {
         string result = "";
@@ -39,19 +36,17 @@ class Program
 
     static void Main()
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        
+        Console.WriteLine("--- Int Testing ---");
+        Console.WriteLine(ToMultiplicate(5));       
+        Console.WriteLine(ToMultiplicate(5, 3));    
 
-        // Թեստավորում ենք Main()-ում
-        Console.WriteLine("--- Int թեստեր ---");
-        Console.WriteLine(ToMultiplicate(5));       // N = 2 (default) -> 10
-        Console.WriteLine(ToMultiplicate(5, 3));    // N = 3 -> 15
+        Console.WriteLine("\n--- Double Testing ---");
+        Console.WriteLine(ToMultiplicate(4.5));     
+        Console.WriteLine(ToMultiplicate(2.5, 4));  
 
-        Console.WriteLine("\n--- Double թեստեր ---");
-        Console.WriteLine(ToMultiplicate(4.5));     // N = 2 (default) -> 9.0
-        Console.WriteLine(ToMultiplicate(2.5, 4));  // N = 4 -> 10.0
-
-        Console.WriteLine("\n--- String թեստեր ---");
-        Console.WriteLine(ToMultiplicate("hello"));   // N = 2 (default) -> hellohello
-        Console.WriteLine(ToMultiplicate("mt448", 3)); // N = 3 -> mt448mt448mt448
+        Console.WriteLine("\n--- String Testing ---");
+        Console.WriteLine(ToMultiplicate("hello"));  
+        Console.WriteLine(ToMultiplicate("mt448", 3)); 
     }
 }
